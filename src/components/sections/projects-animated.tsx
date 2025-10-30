@@ -266,7 +266,7 @@ export function ProjectsAnimated() {
      {/* Hero Content */}
 <motion.div
   ref={heroRef}
-  className="absolute inset-0 flex flex-col items-center justify-start pt-[22%] z-10" // reduced top padding for top alignment
+  className="absolute inset-0 flex flex-col items-center justify-start pt-[18%] z-10" // reduced top padding for top alignment
   variants={containerVariants}
   initial="hidden"
   animate="visible"
@@ -304,7 +304,7 @@ export function ProjectsAnimated() {
         {/* Bottom Content - Building Gradbro and Affiliations */}
         <motion.div
           variants={itemVariants}
-          className="w-full pb-16 px-4 space-y-2 absolute bottom-[18%] text-center  "
+          className="w-full pb-16 px-4 space-y-2 absolute bottom-[16%] text-center  "
         >
           {/* Main Content */}
           <div className="text-center">
@@ -386,15 +386,27 @@ export function ProjectsAnimated() {
 
             {/* Card Back (Content) */}
             <div
-              className={`absolute inset-0 w-full h-full flex flex-col justify-between text-left p-8 ${card.bgColor} ${card.textColor}`}
+              className={`absolute inset-0 w-full h-full flex flex-col justify-between text-left p-8 ${card.bgColor} ${card.textColor} overflow-hidden`}
               style={{
                 backfaceVisibility: "hidden",
                 transform: "rotateY(180deg)",
                 borderRadius: "inherit",
               }}
             >
+              {/* Gradient Shine Effect */}
+              {isFlipped && (
+                <div
+                  className="absolute inset-0 pointer-events-none animate-shine"
+                  style={{
+                    background: "linear-gradient(110deg, transparent 0%, transparent 40%, rgba(255, 255, 255, 0.3) 50%, transparent 60%, transparent 100%)",
+                    backgroundSize: "200% 100%",
+                    animation: `shine-${card.id} 2.5s ease-in-out ${index * 0.15}s`,
+                  }}
+                />
+              )}
+
               {/* Top Section - Icon and Number */}
-              <div className="flex justify-between items-start">
+              <div className="flex justify-between items-start relative z-10">
                 <div className="text-3xl opacity-60">
                   {card.icon}
                 </div>
@@ -404,7 +416,7 @@ export function ProjectsAnimated() {
               </div>
 
               {/* Bottom Section - Title and Description */}
-              <div className="space-y-4">
+              <div className="space-y-4 relative z-10">
                 <h3 className="text-3xl sm:text-4xl font-bold leading-tight">
                   {card.title}
                 </h3>
