@@ -3,10 +3,13 @@
 import { AsciiNoiseEffect } from "@/components/ui/ascii-background";
 import { Header } from "@/components/layout/header";
 import { ProjectsAnimated } from "@/components/sections/projects-animated";
+import { MobileBlock } from "@/components/mobile-block";
 
 export default function Home() {
   return (
     <main className="relative min-h-screen">
+      {/* Mobile Block */}
+      <MobileBlock />
       {/* Background Effect */}
       <div className="fixed inset-0 z-0">
         <AsciiNoiseEffect

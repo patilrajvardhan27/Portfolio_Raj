@@ -54,12 +54,12 @@ export function Header() {
         backdropFilter: headerBlur,
       }}
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 mt-4 md:mt-6 lg:mt-8",
         isScrolled && "shadow-lg border-b border-border/50"
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center h-20">
+        <div className="flex items-center justify-center h-16 md:h-20">
           {/* Navigation Links */}
           <nav className="flex items-center gap-6 px-8 py-3 bg-black/40 backdrop-blur-md rounded-full border border-white/10">
             {/* Social Links */}
