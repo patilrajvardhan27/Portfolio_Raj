@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowUpRight } from "lucide-react";
+import { Copy } from "lucide-react";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -54,19 +54,60 @@ const projectCards: ProjectCard[] = [
   },
 ];
 
+const affiliations = [
+  "VIT",
+  "Valsco Tech.",
+  "Walstar Tech.",
+  "QuickHeal Tech.",
+  "Konark Computer's",
+  "CU - Boulder",
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
 export function ProjectsAnimated() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLHeadingElement>(null);
+  const heroRef = useRef<HTMLDivElement>(null);
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText("patilrajvardhan27@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   useEffect(() => {
-    if (!sectionRef.current || !containerRef.current || !headerRef.current) return;
+    if (!sectionRef.current || !containerRef.current || !headerRef.current || !heroRef.current) return;
 
     const section = sectionRef.current;
     const container = containerRef.current;
     const header = headerRef.current;
+    const hero = heroRef.current;
     let isGapAnimationCompleted = false;
     let isFlipAnimationCompleted = false;
 
@@ -74,16 +115,26 @@ export function ProjectsAnimated() {
       ScrollTrigger.create({
         trigger: section,
         start: "top top",
-        end: `+=${window.innerHeight * 4}px`,
+        end: `+=${window.innerHeight * 5}px`,
         scrub: 1,
         pin: true,
         pinSpacing: true,
         onUpdate: (self) => {
           const progress = self.progress;
 
-          // Header fade in (10% - 25%)
-          if (progress >= 0.1 && progress <= 0.25) {
-            const headerProgress = gsap.utils.mapRange(0.1, 0.25, 0, 1, progress);
+          // Hero fade out (0% - 15%)
+          if (progress <= 0.15) {
+            const heroProgress = gsap.utils.mapRange(0, 0.15, 1, 0, progress);
+            gsap.set(hero, {
+              opacity: heroProgress,
+            });
+          } else {
+            gsap.set(hero, { opacity: 0 });
+          }
+
+          // Header fade in (15% - 30%)
+          if (progress >= 0.15 && progress <= 0.3) {
+            const headerProgress = gsap.utils.mapRange(0.15, 0.3, 0, 1, progress);
             const yValue = gsap.utils.mapRange(0, 1, 40, 0, headerProgress);
             const opacityValue = gsap.utils.mapRange(0, 1, 0, 1, headerProgress);
 
@@ -91,22 +142,24 @@ export function ProjectsAnimated() {
               y: yValue,
               opacity: opacityValue,
             });
-          } else if (progress < 0.1) {
+          } else if (progress < 0.15) {
             gsap.set(header, { y: 40, opacity: 0 });
-          } else if (progress > 0.25) {
+          } else if (progress > 0.3) {
             gsap.set(header, { y: 0, opacity: 1 });
           }
 
-          // Container width shrink (0% - 25%)
-          if (progress <= 0.25) {
-            const widthPercentage = gsap.utils.mapRange(0, 0.25, 75, 60, progress);
+          // Container width shrink (15% - 35%)
+          if (progress >= 0.15 && progress <= 0.35) {
+            const widthPercentage = gsap.utils.mapRange(0.15, 0.35, 75, 60, progress);
             gsap.set(container, { width: `${widthPercentage}%` });
+          } else if (progress < 0.15) {
+            gsap.set(container, { width: "75%" });
           } else {
             gsap.set(container, { width: "60%" });
           }
 
-          // Gap and border radius animation (35%)
-          if (progress >= 0.35 && !isGapAnimationCompleted) {
+          // Gap and border radius animation (45%)
+          if (progress >= 0.45 && !isGapAnimationCompleted) {
             gsap.to(container, {
               gap: "40px",
               duration: 0.5,
@@ -120,7 +173,7 @@ export function ProjectsAnimated() {
             });
 
             isGapAnimationCompleted = true;
-          } else if (progress < 0.35 && isGapAnimationCompleted) {
+          } else if (progress < 0.45 && isGapAnimationCompleted) {
             gsap.to(container, {
               gap: "0px",
               duration: 0.5,
@@ -148,8 +201,8 @@ export function ProjectsAnimated() {
             isGapAnimationCompleted = false;
           }
 
-          // Flip animation (70%)
-          if (progress >= 0.7 && !isFlipAnimationCompleted) {
+          // Flip animation (75%)
+          if (progress >= 0.75 && !isFlipAnimationCompleted) {
             gsap.to(".project-card", {
               rotationY: 180,
               duration: 0.75,
@@ -166,7 +219,7 @@ export function ProjectsAnimated() {
 
             setIsFlipped(true);
             isFlipAnimationCompleted = true;
-          } else if (progress < 0.7 && isFlipAnimationCompleted) {
+          } else if (progress < 0.75 && isFlipAnimationCompleted) {
             gsap.to(".project-card", {
               rotationY: 0,
               duration: 0.75,
@@ -197,7 +250,7 @@ export function ProjectsAnimated() {
   return (
     <section
       ref={sectionRef}
-      id="projects"
+      id="home"
       className="relative h-screen flex items-center justify-center overflow-hidden bg-black"
     >
       {/* Slide up animation overlay */}
@@ -208,7 +261,73 @@ export function ProjectsAnimated() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="absolute inset-0 bg-black -z-10"
       />
-      {/* Header */}
+
+      {/* Hero Content */}
+     {/* Hero Content */}
+<motion.div
+  ref={heroRef}
+  className="absolute inset-0 flex flex-col items-center justify-start pt-[22%] z-10" // reduced top padding for top alignment
+  variants={containerVariants}
+  initial="hidden"
+  animate="visible"
+>
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl flex flex-col items-center">
+    {/* Main Heading - "This is Raj" */}
+    <motion.h1
+      variants={itemVariants}
+      className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-center mb-2"
+    >
+      <span className="block text-foreground">
+        This is{" "}
+        <span className="text-foreground text-brand hover:underline">
+          Raj
+        </span>
+      </span>
+    </motion.h1>
+
+    {/* Email Section */}
+    <motion.div
+      variants={itemVariants}
+      className="flex flex-wrap items-center justify-center gap-3 text-foreground"
+    >
+      <button
+        onClick={copyEmail}
+        className="inline-flex items-center gap-2 px-3 bg-foreground/5 hover:bg-foreground/10 rounded-lg transition-colors group"
+      >
+        <span className="font-mono text-sm">patilrajvardhan27@gmail.com</span>
+        <Copy className="w-4 opacity-50 group-hover:opacity-100 transition-opacity" />
+      </button>
+      {copied && <span className="text-sm text-green-500">Copied!</span>}
+    </motion.div>
+        </div>
+
+        {/* Bottom Content - Building Gradbro and Affiliations */}
+        <motion.div
+          variants={itemVariants}
+          className="w-full pb-16 px-4 space-y-2 absolute bottom-[18%] text-center  "
+        >
+          {/* Main Content */}
+          <div className="text-center">
+            <p className="text-foreground text-lg">
+              Building <a href="#" className="text-brand hover:underline font-medium">Gradbro</a> to 1M MRR.
+            </p>
+          </div>
+
+          {/* Affiliations */}
+          <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
+            {affiliations.map((affiliation) => (
+              <span
+                key={affiliation}
+                className="px-4 py-2 bg-brand/90 hover:bg-brand text-brand-foreground rounded-lg text-sm font-medium transition-colors cursor-default"
+              >
+                {affiliation}
+              </span>
+            ))}
+          </div>
+        </motion.div>
+      </motion.div>
+
+      {/* Header - Projects in my journey */}
       <div className="absolute top-[20%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
         <h2
           ref={headerRef}
@@ -297,15 +416,6 @@ export function ProjectsAnimated() {
           </div>
         ))}
       </div>
-
-      {/* CTA Button - appears after flip */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isFlipped ? 1 : 0 }}
-        transition={{ duration: 0.5, delay: isFlipped ? 0.5 : 0 }}
-        className="absolute bottom-16 left-1/2 -translate-x-1/2"
-      >
-      </motion.div>
     </section>
   );
 }

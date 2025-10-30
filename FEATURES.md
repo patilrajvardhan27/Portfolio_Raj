@@ -2,24 +2,31 @@
 
 ## Implemented Features
 
-### 1. **Animated Projects Section** ✨
-The portfolio now includes a stunning 3D animated cards section inspired by the "Redo" design style.
+### 1. **Combined Landing + Animated Projects Section** ✨
+The portfolio now features a unified experience combining the landing page with a stunning 3D animated cards section inspired by the "Redo" design style.
 
 #### Features:
-- **3D Card Flip Animation**: Cards respond to mouse movement with realistic 3D rotation
-- **Background Image Integration**: Uses `project_sec_bg.jpg` split across three cards
+- **Integrated Hero Section**: Landing page content appears first, then smoothly fades out on scroll
+- **3D Card Flip Animation**: Cards respond to scroll with realistic 3D rotation
+- **Project Cards with Cover Images**: Each card shows a unique cover image before flipping
 - **Three Journey Stages**:
-  1. **Going Zero to One** (Light gray card)
-  2. **Scaling from One to N** (Red accent card)
-  3. **Need Quick Solutions** (Dark card)
+  1. **Messit** (Campus utility app - Light gray card)
+  2. **Gradbro** (University recommendations - Brand color card)
+  3. **MDairy** (Dairy management - Dark card)
 
 #### Technical Implementation:
-- **Framer Motion**: Advanced 3D transforms with `rotateX` and `rotateY`
-- **Mouse Tracking**: Real-time cursor position tracking for tilt effect
-- **Spring Physics**: Smooth, natural card movements
-- **Gradient Overlays**: Color-coded cards matching the design system
-- **Background Positioning**: Image split into three segments (0%, 33.33%, 66.66%)
-- **Hover Effects**: Scale and shine effects on interaction
+- **GSAP ScrollTrigger**: Advanced scroll-based animations with timeline control
+- **Framer Motion**: Smooth hero section animations and card interactions
+- **Multi-stage Timeline**:
+  1. Hero content fades out (0% - 15%)
+  2. Journey header fades in (18% - 30%)
+  3. Container width shrinks (15% - 30%)
+  4. Cards separate with gap and border radius (42%)
+  5. Cards flip to reveal content (75%)
+- **3D Transforms**: Card flips with realistic perspective and rotation
+- **Cover Images**: Full-bleed images on card fronts
+- **Color-coded Backs**: Each card has unique background and text colors
+- **Pinned Scroll**: Section stays fixed while animations play through
 
 #### Location:
 `src/components/sections/projects-animated.tsx`
@@ -35,10 +42,9 @@ All colors are managed through a single source of truth.
 
 ### 3. **Professional Component Architecture**
 - **Header**: Sticky navigation with blur effect on scroll
-- **Hero**: Animated introduction with social links
-- **About**: Skill cards with hover animations
-- **Projects**: 3D animated journey cards
-- **Contact**: Contact form with information cards
+- **Projects**: Combined landing page + 3D animated journey cards with scroll-triggered transitions
+- **About**: Skill cards with hover animations (optional)
+- **Contact**: Contact form with information cards (optional)
 - **Footer**: Professional footer with links
 
 ### 4. **Animation System**
