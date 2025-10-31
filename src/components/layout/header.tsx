@@ -55,7 +55,7 @@ export function Header() {
       }}
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 mt-4 md:mt-6 lg:mt-8",
-        isScrolled && "shadow-lg border-b border-border/50"
+        isScrolled && "shadow-lg"
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
