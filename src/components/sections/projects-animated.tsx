@@ -386,7 +386,7 @@ export function ProjectsAnimated() {
         {/* Bottom Content - Building Gradbro and Affiliations */}
         <motion.div
           variants={itemVariants}
-          className="w-full pb-12 md:pb-16 px-4 space-y-2 md:space-y-3 absolute bottom-[12vh] md:bottom-[16vh] text-center"
+          className="w-full pb-12 md:pb-16 px-4 space-y-2 md:space-y-2 absolute bottom-[12vh] md:bottom-[12vh] text-center"
         >
           {/* Main Content */}
           <div className="text-center">
@@ -518,7 +518,7 @@ export function ProjectsAnimated() {
         style={{ opacity: 0 }}
       >
         <div className="max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto py-8 md:py-12 lg:py-16">
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed tracking-normal font-bold text-justify border-t-2 border-b-2 border-foreground/20 py-8 md:py-10 lg:py-12">
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed tracking-normal font-bold text-justify border-t-2 border-b-2 border-foreground/20 py-8 md:py-10 lg:py-12">
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">I</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">scored</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">81.20%</span>
