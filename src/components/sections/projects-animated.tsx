@@ -559,7 +559,7 @@ export function ProjectsAnimated() {
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">repeated</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">itself,</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">but</span>
-            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">I've</span>
+            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">I&apos;ve</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">learned</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">that</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">what</span>
@@ -636,7 +636,7 @@ export function ProjectsAnimated() {
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">by</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">18%.</span>
             <br />
-            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">I've</span>
+            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">I&apos;ve</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">worked</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">across</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">React,</span>
@@ -679,7 +679,7 @@ export function ProjectsAnimated() {
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">need.</span>
             <br />
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">Life</span>
-            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">isn't</span>
+            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">isn&apos;t</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">a</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">race,</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">it&apos;s</span>
@@ -739,7 +739,7 @@ export function ProjectsAnimated() {
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">late</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">to</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">my</span>
-            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">season—I'm</span>
+            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">season—I&apos;m</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">preparing</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">to</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">last.</span>

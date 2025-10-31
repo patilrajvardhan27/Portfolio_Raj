@@ -36,7 +36,7 @@ export function MobileBlock() {
       <div className="text-center space-y-4 sm:space-y-6 max-w-md">
         <div className="text-5xl sm:text-6xl mb-4 sm:mb-8">💻</div>
         <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
-          Don't ruin your experience on mobile
+          Don&apos;t ruin your experience on mobile
         </h1>
         <p className="text-base sm:text-lg text-muted-foreground">
           See it on desktop
