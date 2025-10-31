@@ -595,7 +595,7 @@ export function ProjectsAnimated() {
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">tall.</span>
             <br />
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">Now</span>
-            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">I'm</span>
+            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">I&apos;m</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">here</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">in</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">Boulder</span>
@@ -650,14 +650,14 @@ export function ProjectsAnimated() {
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">solve</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">real</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">problems.</span>
-            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">I'm</span>
+            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">I&apos;m</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">not</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">looking</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">for</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">just</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">any</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">opportunity;</span>
-            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">I'm</span>
+            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">I&apos;m</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">looking</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">for</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">a</span>
@@ -682,7 +682,7 @@ export function ProjectsAnimated() {
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">isn't</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">a</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">race,</span>
-            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">it's</span>
+            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">it&apos;s</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">a</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">garden—some</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">flowers</span>
@@ -704,14 +704,14 @@ export function ProjectsAnimated() {
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">roots</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">that</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">others</span>
-            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">can't</span>
+            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">can&apos;t</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">see.</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">When</span>
-            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">it's</span>
+            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">it&apos;s</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">my</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">season,</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">I</span>
-            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">won't</span>
+            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">won&apos;t</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">just</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">grow,</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">I</span>
@@ -730,11 +730,11 @@ export function ProjectsAnimated() {
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">universities,</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">but</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">I</span>
-            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">didn't</span>
+            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">didn&apos;t</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">miss</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">my</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">purpose.</span>
-            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">I'm</span>
+            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">I&apos;m</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">not</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">late</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">to</span>
@@ -744,7 +744,7 @@ export function ProjectsAnimated() {
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">to</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">last.</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">If</span>
-            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">you're</span>
+            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">you&apos;re</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">building</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">something</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">meaningful</span>
@@ -755,7 +755,7 @@ export function ProjectsAnimated() {
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">ships</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">with</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">ownership,</span>
-            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">let's</span>
+            <span className="reveal-word inline-block text-foreground opacity-0 mr-2">let&apos;s</span>
             <span className="reveal-word inline-block text-foreground opacity-0 mr-2">talk.</span>
           </p>
         </div>
