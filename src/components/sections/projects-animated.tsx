@@ -348,11 +348,12 @@ export function ProjectsAnimated() {
      {/* Hero Content */}
 <motion.div
   ref={heroRef}
-  className="absolute inset-0 flex flex-col items-center justify-start pt-[15vh] md:pt-[18vh] lg:pt-[32vh] z-10"
+  className="absolute inset-0 flex flex-col items-center justify-start pt-[28vh] md:pt-[32vh] lg:pt-[35vh] z-10"
   variants={containerVariants}
   initial="hidden"
   animate="visible"
 >
+  {/* Top Content - Heading and Email */}
   <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl flex flex-col items-center">
     {/* Main Heading - "This is Raj" */}
     <motion.h1
@@ -381,33 +382,8 @@ export function ProjectsAnimated() {
       </button>
       {copied && <span className="text-xs sm:text-sm text-green-500">Copied!</span>}
     </motion.div>
-        </div>
-
-        {/* Bottom Content - Building Gradbro and Affiliations */}
-        <motion.div
-          variants={itemVariants}
-          className="w-full pb-12 md:pb-16 px-4 space-y-2 md:space-y-2 absolute bottom-[12vh] md:bottom-[12vh] text-center"
-        >
-          {/* Main Content */}
-          <div className="text-center">
-            <p className="text-foreground text-sm sm:text-base md:text-lg">
-              Building <a href="#" className="text-brand hover:underline font-medium">Gradbro</a> to 1M MRR.
-            </p>
-          </div>
-
-          {/* Affiliations */}
-          <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto">
-            {affiliations.map((affiliation) => (
-              <span
-                key={affiliation}
-                className="px-2.5 py-1 sm:px-3 sm:py-1.5 bg-brand/90 hover:bg-brand text-brand-foreground rounded-lg text-xs sm:text-sm font-medium transition-colors cursor-default"
-              >
-                {affiliation}
-             </span>
-            ))}
-          </div>
-        </motion.div>
-      </motion.div>
+  </div>
+</motion.div>
 
       {/* Header - Projects in my journey */}
       <div className="absolute top-[20%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 px-4">
