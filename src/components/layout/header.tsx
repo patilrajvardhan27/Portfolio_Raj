@@ -83,7 +83,7 @@ export function Header() {
 
             {/* Resume Button */}
             <motion.a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1wZQta9W_aNaFq1NuqDxByBfl5Fg7dLdP/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors text-sm"
